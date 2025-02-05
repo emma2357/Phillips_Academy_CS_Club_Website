@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .section-one {
+    position: fixed; /* Fixed position for parallax effect */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    z-index: 1; /* Keep this section above others */
+    background-color: black;
+  }
+
+  .section-one h1 {
+    color: white;
+    font-family: 'Inria Sans';
+    font-size: 80px;
+  }
+  
+  .background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep the blurred background behind the content */
+}
+
+.background-blur::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('banner.jpeg') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px); /* Blurred background */
+    opacity: 0.5;
+} 
+  .content {
+    z-index: 2; /* Keep text on top */
+    position: relative; /* Keep the content in the correct stacking context */
+  }
+  
+  .section-two {
+    background-color: #0031A7; /* Semi-transparent background for Section Two */
+    padding: 50px;
+    min-height: 100vh; /* Ensure it takes up at least one viewport height */
+    margin-top: 100vh; /* Start below Section One */
+    z-index: 3; /* Ensure it appears above Section One */
+    position: relative; /* Establish a positioning context */
+  }
+
+  .bento-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 50vw; /* Covers half the page */
+    height: 90vh; /* Adjust as needed */
+    margin: auto;
+    margin-left: 0; /* Align to the left */
+  }
+  
+  .bento-item-large {
+    grid-column: span 2;
+    grid-row: 1 / 2;
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .bento-item-large-2 {
+    grid-column: span 2;
+    grid-row: 2 / 3;
+    background-image: url('https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .bento-item-large-vertical {
+    grid-column: 3 / 4;
+    grid-row: 1 / span 2;
+    background-image: url('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .bento-item-small {
+    grid-column: span 1/2;
+    grid-row: 3 / 5;
+    background-image: url('https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .bento-item-large-3 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+    background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/amazing-stone-path-in-forest-free-image.jpg?w=600&quality=80');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* Common styling for Bento items */
+  .bento-item-large, 
+  .bento-item-large-2, 
+  .bento-item-large-vertical, 
+  .bento-item-small, 
+  .bento-item-large-3 {
+    border-radius: 8px;
+  }
+
+  .description{
+    color: white;
+    font-family: 'Inria Sans';
+    align-self: left;
+    padding-right: 100px;
+    width: 50%;
+
+    h1{
+      font-size: 80px;
+    }
+    p{
+      font-size: 40px;
+    }
+  }
+
+  footer {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    padding-top: 20px;
+    font-size: x-small;
+  }
