@@ -8,6 +8,47 @@
     height: 100%;
     font-family: Arial, sans-serif;
   }
+
+  .href_dark {
+    color: #bcd4fe;
+ }
+ .href_dark:hover {
+    color: #79a8f9;
+ }
+ 
+ .href_light {
+    color: #446bb0;
+ }
+ 
+ .href_light:hover {
+    color: #2F4977;
+ }
+ 
+ .logo{
+    max-width: 45px;
+ }
+ 
+ .navbar-brand{
+    display : flex;
+ }
+ 
+ .navbar_name{
+    margin-left: 0.5em;
+    font-size: 22px !important;
+    color: #000000 !important;
+ }
+ 
+ .nav_tab{
+    font-size: 16px !important;
+    color: #404040 !important;
+    margin-right: 0.5em;
+ }
+ 
+ .nav_tab:hover{
+    color: #2F4977 !important;
+    background-color: #D0E1FF;
+ }
+ 
   
   .section {
     display: flex;
